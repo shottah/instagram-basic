@@ -1,0 +1,29 @@
+{
+  "name": "instagram-basic",
+  "version": "1.0.0",
+  "description": "Wrapper for Instagram Basic Display API.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matabeitt/instagram-basic.git"
+  },
+  "keywords": [
+    "instagram",
+    "basic",
+    "display",
+    "api"
+  ],
+  "author": "Matthew Abraham <m.abraham.dev@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matabeitt/instagram-basic/issues"
+  },
+  "homepage": "https://github.com/matabeitt/instagram-basic#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
