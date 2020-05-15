@@ -26,9 +26,11 @@
   },
   "homepage": "https://github.com/matabeitt/instagram-basic#readme",
   "dependencies": {
+    "@types/node": "^14.0.1",
     "axios": "^0.19.2"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "ts-node": "^8.10.1",
     "typescript": "^3.9.2"
   }
