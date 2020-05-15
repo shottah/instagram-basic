@@ -3,3 +3,6 @@ node_modules
 
 # Ignore compiled library from being uploaded
 lib
+
+# Ignore critical files
+*.env
