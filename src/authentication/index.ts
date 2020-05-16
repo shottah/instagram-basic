@@ -4,13 +4,15 @@ export type AuthOptions = {
     AppID: string,
     ClientSecret: string,
     RedirectURI: string,
-    AccessToken: string,
+    AccessToken: string | undefined,
     Scope: Array<String>,
 }
 
 export default class InstagramAuth {
     private static _instance: InstagramAuth;
     private static _options: AuthOptions;
+
+    public get AccessToken () { return InstagramAuth._options.AccessToken };
     
     private constructor (options:AuthOptions) {
         InstagramAuth._options = options;
@@ -42,9 +44,6 @@ export default class InstagramAuth {
         return {authorisation_code: ''};
     }
 
-    /**
-     * Gets the Access Token from Instagram
-     */
     private getAccessToken = (authorisation_code: String): {access_token: String} => {
         return {access_token: ''};
     }
@@ -55,6 +54,6 @@ export default class InstagramAuth {
      * Instagram API URL.
      */
     public isAuthorised = (): Boolean => {
-        return false;
+        return InstagramAuth._options.AccessToken ? true : false;
     }
 };
