@@ -14,4 +14,4 @@ const ig = InstagramAuth.getInstance({
 
 const service = new InstagramBasicService(ig);
 const images = service.getMedia('complextt');
-console.log(images);
+images.then(res => console.log(res.data)).catch(err => console.log(err.response.status))
