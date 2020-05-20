@@ -35,7 +35,7 @@ export default class InstagramAuth {
      */
     private constructAuthorisationUrl = (): String => {
         return (
-            API_URL + 
+            API_URL.replace('graph', 'api') + 
             'oauth/authorize' +
             '?client_id=' + InstagramAuth._options.ClientID +
             '&redirect_uri=' + InstagramAuth._options.RedirectUri +
@@ -50,7 +50,7 @@ export default class InstagramAuth {
      */
     private constructAccessTokenUrl = (authorisation_code: String): String => {
         return (
-            API_URL +
+            API_URL.replace('graph', 'api') +
             'oauth/access_token' +
             '?client_id=' + InstagramAuth._options.ClientID +
             '&client_secret=' + InstagramAuth._options.ClientSecret +
