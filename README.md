@@ -27,13 +27,21 @@ npm run build
 This object instantiates the data required to authenticate an Instagram User for the API to be called. This is achieved by using the singleton constructor:
 
 ```js
-const instagram = InstagramAuth.getInstance({
+const instagram = InstagramAuth.getInstance(config:AuthOptions)
+```
+
+### AuthOptions
+
+This type refers to the configuration of `InstagramAuth` and reflects the required elements of making calls to **Instagram Basic Display API**.
+
+```ts
+type AuthOptions = {
     clientID: String,
     clientSecret: String,
     redirectUri: String,
     accessToken?: String,
     scope: Array<String>
-})
+}
 ```
 
 ### Singleton Pattern
