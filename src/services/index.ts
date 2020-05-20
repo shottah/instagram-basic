@@ -30,7 +30,7 @@ export default class InstagramBasicService {
             {
                 params: {
                     fields: fields.join(','),
-                    access_token: '000fea',
+                    access_token: this.auth.AccessToken,
                 },
                 transformResponse: [o => JSON.parse(o)]
             }
@@ -45,6 +45,11 @@ export default class InstagramBasicService {
         return result;
     }
 
+    /**
+     * Gets data about the User node suppled, populated with
+     * data according to the UserField(s) supplied.
+     * @param fields 
+     */
     public getUser (fields? : Array<UserField>): any {
         if (!this.auth.isAuthorised()) return [];
     }
