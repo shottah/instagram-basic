@@ -62,7 +62,7 @@ If you are trying to authenticate a user via your application, you need to follo
 const url: String = instagram.constructAuthenticationUrl();
 ```
 
-This will construct a `URL` for your user to be redirected to when requesting to connect to instagram. After completing this step, they will be redirected to your server's `Auth` endpoint, where you can extrapolate the Authentication Code from the `response`. *See example below using ExpressJS.*
+This will construct a `URL` for your user to be redirected to when requesting to connect to instagram. After completing this step, they will be redirected to your server's `Auth` endpoint, where you can extrapolate the Authentication Code from the `request`. *See example below using ExpressJS.*
 
 ```js
 app.get('/auth', (response, request) => {
